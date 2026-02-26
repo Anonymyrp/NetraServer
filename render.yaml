@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: netra-server
+    runtime: node
+    repo: https://github.com/Anonymyrp/NetraServer
+    plan: free
+    branch: main
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /api/test
+    envVars:
+      - key: NODE_VERSION
+        value: 18.17.0
+      - key: CLOUDINARY_CLOUD_NAME
+        value: du9yxiaey                    # Your actual cloud name
+      - key: CLOUDINARY_API_KEY
+        value: 479551899312617               # Your actual API key
+      - key: CLOUDINARY_API_SECRET
+        value: gLLemXEGRhjUFHfNLO0MkQ-hnJ4   # Your actual API secret
+      - key: PORT
+        value: 5000
