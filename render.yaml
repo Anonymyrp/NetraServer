@@ -6,7 +6,7 @@ services:
     plan: free
     branch: main
     buildCommand: npm install
-    startCommand: node server.js
+    startCommand: node index.js
     healthCheckPath: /api/test
     envVars:
       - key: NODE_VERSION
